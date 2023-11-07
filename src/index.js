@@ -4,7 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+if (localStorage.getItem('urlpath') === '{path: "", text: ""}' || !localStorage.getItem('urlpath')){
+  localStorage.setItem("urlpath", JSON.stringify({path: '' , text: ''})); 
+}
+
 root.render(
   <React.StrictMode>
     <App />
